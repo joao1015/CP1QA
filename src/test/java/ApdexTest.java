@@ -1,7 +1,4 @@
-
-
 // João Paulo Moreira dos Santos / 557808
-
 import org.example.Apdex;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ApdexTest {
 
     private Apdex apdex;
-    private final int totalAmostras = 557808;
+    private final int totalAmostras = 557808; // seu RM
 
     @BeforeEach
     public void setup() {
@@ -20,7 +17,6 @@ public class ApdexTest {
 
     @Test
     public void validarApdexExcelente() {
-        // Arrange, Act, Assert
         float score = apdex.calcularApdex(totalAmostras, 0, totalAmostras);
         assertEquals(1.0f, score, 0.001f);
     }
